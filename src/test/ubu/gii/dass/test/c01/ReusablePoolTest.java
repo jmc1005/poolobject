@@ -15,7 +15,7 @@ import ubu.gii.dass.c01.Reusable;
 import ubu.gii.dass.c01.ReusablePool;
 
 /**
- * @author alumno
+ * @author Javier Martín Castro (jmc1005@alu.ubu.es)
  *
  */
 public class ReusablePoolTest {
@@ -104,6 +104,7 @@ public class ReusablePoolTest {
 				util = r.util();
 				assertTrue(util.equals(aux.util()));
 				pool.releaseReusable(aux);
+				
 			}
 
 		} catch (NotFreeInstanceException | DuplicatedInstanceException e) {

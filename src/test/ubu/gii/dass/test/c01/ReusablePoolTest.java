@@ -9,17 +9,26 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import ubu.gii.dass.c01.DuplicatedInstanceException;
+import ubu.gii.dass.c01.NotFreeInstanceException;
+import ubu.gii.dass.c01.Reusable;
+import ubu.gii.dass.c01.ReusablePool;
+
 /**
  * @author alumno
  *
  */
 public class ReusablePoolTest {
 
+	// Propiedades
+	private ReusablePool pool;
+
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception {
+		pool = ReusablePool.getInstance();
 	}
 
 	/**
@@ -27,6 +36,7 @@ public class ReusablePoolTest {
 	 */
 	@After
 	public void tearDown() throws Exception {
+		pool = null;
 	}
 
 	/**
@@ -34,7 +44,14 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testGetInstance() {
-		fail("Not yet implemented");
+
+		pool = ReusablePool.getInstance();
+
+		// Comprobación el objeto no es nulo
+		assertNotNull(pool);
+
+		// Comprobación si el objeto es instancia de ReusablePool
+		assertTrue(pool instanceof ReusablePool);
 	}
 
 	/**
@@ -42,15 +59,57 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testAcquireReusable() {
-		fail("Not yet implemented");
+
+		// obtenemos reusable de lista
+		Reusable r;
+		String util = null;
+		
+		try {
+
+			r = pool.acquireReusable();
+
+			// obtenemos los reusables que tenemos en el pool
+			while (r != null) {
+				util = r.util();
+				r = pool.acquireReusable();				
+			}
+
+		} catch (NotFreeInstanceException e) {
+
+			System.err.println(util + ". " + e.getMessage());
+		}
 	}
 
 	/**
-	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
+	 * Test method for
+	 * {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
 	 */
 	@Test
 	public void testReleaseReusable() {
-		fail("Not yet implemented");
+
+		// liberar objeto reusable
+		pool = ReusablePool.getInstance();
+		Reusable r;
+		Reusable aux;
+		String util = null;
+		
+		try {
+
+			r = pool.acquireReusable();
+
+			while (r != null) {
+				util = r.util();
+				pool.releaseReusable(r);
+				aux = pool.acquireReusable();
+				util = r.util();
+				assertTrue(util.equals(aux.util()));
+				pool.releaseReusable(aux);
+			}
+
+		} catch (NotFreeInstanceException | DuplicatedInstanceException e) {
+			System.err.println(util + ". " + e.getMessage());
+		}
+
 	}
 
 }

@@ -71,7 +71,9 @@ public class ReusablePoolTest {
 			// obtenemos los reusables que tenemos en el pool
 			while (r != null) {
 				util = r.util();
-				r = pool.acquireReusable();				
+				r = pool.acquireReusable();	
+				assertNotNull(r);
+				assertTrue(r instanceof Reusable);
 			}
 
 		} catch (NotFreeInstanceException e) {
@@ -95,16 +97,21 @@ public class ReusablePoolTest {
 		
 		try {
 
+			assertNotNull(pool);
 			r = pool.acquireReusable();
-
+			
 			while (r != null) {
 				util = r.util();
 				pool.releaseReusable(r);
 				aux = pool.acquireReusable();
 				util = r.util();
 				assertTrue(util.equals(aux.util()));
-				pool.releaseReusable(aux);
+				pool.releaseReusable(aux);		
 				
+				assertNotNull(r);
+				assertTrue(r instanceof Reusable);
+				assertNotNull(aux);
+				assertTrue(aux instanceof Reusable);
 			}
 
 		} catch (NotFreeInstanceException | DuplicatedInstanceException e) {

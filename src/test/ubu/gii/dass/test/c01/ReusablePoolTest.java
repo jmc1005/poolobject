@@ -59,18 +59,18 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testAcquireReusable() throws NotFreeInstanceException {
-		
+
 		Reusable r = pool.acquireReusable();
 		assertNotNull(r);
 		assertTrue(r instanceof Reusable);
 
 		// obtenemos los reusables que tenemos en el pool
 		while (r != null) {
+			
 			assertNotNull(r);
 			assertTrue(r instanceof Reusable);
 			r = pool.acquireReusable();
 		}
-		;
 	}
 
 	/**
@@ -91,6 +91,7 @@ public class ReusablePoolTest {
 		assertTrue(r instanceof Reusable);
 
 		while (r != null) {
+			
 			pool.releaseReusable(r);
 			aux = pool.acquireReusable();
 			assertSame(r, aux);

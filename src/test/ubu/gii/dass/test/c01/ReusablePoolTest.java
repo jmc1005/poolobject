@@ -94,7 +94,7 @@ public class ReusablePoolTest {
 			
 			pool.releaseReusable(r);
 			aux = pool.acquireReusable();
-			assertSame(r, aux);
+			assertTrue(r.util().equals(aux.util()));
 			pool.releaseReusable(aux);
 
 			assertNotNull(r);

@@ -1,9 +1,7 @@
-[![Build Status](https://app.travis-ci.com/jmc1005/poolobject.svg?branch=master)](https://app.travis-ci.com/jmc1005/poolobject)
-
-[![codecov](https://codecov.io/gh/jmc1005/poolobject/branch/master/graph/badge.svg?token=CE8SZLHEAW)](https://codecov.io/gh/jmc1005/poolobject)
-
 # poolobject
 ===============
+
+ [![Java CI](https://github.com/jmc1005/poolobject/actions/workflows/ci.yml/badge.svg)](https://github.com/jmc1005/poolobject/actions/workflows/ci.yml) [![Build Status](https://app.travis-ci.com/jmc1005/poolobject.svg?branch=master)](https://app.travis-ci.com/jmc1005/poolobject) [![codecov](https://codecov.io/gh/jmc1005/poolobject/branch/master/graph/badge.svg?token=CE8SZLHEAW)](https://codecov.io/gh/jmc1005/poolobject)
 
 ## Autores:
 
@@ -21,12 +19,16 @@ El objetivo es establecer un caso de estudio que sirva para caracterizar y evalu
 
 ## Preguntas
 - ¿Se ha realizado trabajo en equipo?
+  
+  No, se realiza individualemente
 
 - ¿Tiene calidad el conjunto de pruebas disponibles? 
  
   Si, se han superado el 95% de las pruebas
 
 - ¿Cuál es el esfuerzo invertido en realizar la actividad?
+ 
+  Se realiza la práctica individualmente
 
 - ¿Cuál es el número de fallos encontrados en el código?
   

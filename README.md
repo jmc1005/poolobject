@@ -18,18 +18,19 @@ En la práctica se va simular un pequeño desarrollo de un producto software par
 El objetivo es establecer un caso de estudio que sirva para caracterizar y evaluar tanto el producto desarrollado como el proceso seguido.
 
 ## Preguntas
-- ¿Se ha realizado trabajo en equipo?
+
+### Se ha realizado trabajo en equipo?
+
+Sí,se ha realizado en equipo. Inicialmente y por las circunstancias dadas se comenzó a realizar individualmente poniéndose en conjunto posteriormente.
+
+### ¿Tiene calidad el conjunto de pruebas disponibles? 
+
+Si, se han superado las diferentes pruebas de CI (Integración Continua) y se ha logrado un 95% de cobertura en la clase solicitada.
+
+### ¿Cuál es el esfuerzo invertido en realizar la actividad?
+
+La configuración  e integración de las diferentes herramientas (sobre todo Travis) ha sido la parte más costosa de la práctica. Esto se debe mayormente a la dificultad encontrada en la propia herramienta a la hora de configurar una cuenta como de estudiante.
+
+### ¿Cuál es el número de fallos encontrados en el código?
   
-  No, se realiza individualemente
-
-- ¿Tiene calidad el conjunto de pruebas disponibles? 
- 
-  Si, se han superado el 95% de las pruebas
-
-- ¿Cuál es el esfuerzo invertido en realizar la actividad?
- 
-  Se realiza la práctica individualmente
-
-- ¿Cuál es el número de fallos encontrados en el código?
-  
-  Se intentan mejorar el porcentaje de coverage de las pruebas quitando los try catch, posteriormente se incluyen porque aunque compila el proyecto, a la hora de realizar el despliegue da un error al lanzar excepciones. Al realizar los cambios se comprueba que todo funciona correctamente.
+Se intentan mejorar el porcentaje de coverage de las pruebas quitando los try catch, posteriormente se incluyen porque aunque compila el proyecto, a la hora de realizar el despliegue da un error al lanzar excepciones. Al realizar los cambios se comprueba que todo funciona correctamente.

@@ -5,8 +5,8 @@
 
 ## Autores:
 
-- [Javier Martín Castro](jmc1005@alu.ubu.es)
-- [Rubén Maté Iturriaga](rmi0012@alu.ubu.es)
+- [Javier Martín Castro](mailto:jmc1005@alu.ubu.es)
+- [Rubén Maté Iturriaga](mailto:rmi0012@alu.ubu.es)
 
 ## Objetivos específicos
 - Comprender los objetivos de medición relacionados con la caracterización y la evaluación de productos, procesos y recursos software

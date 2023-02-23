@@ -19,9 +19,9 @@ El objetivo es establecer un caso de estudio que sirva para caracterizar y evalu
 
 ## Preguntas
 
-### Se ha realizado trabajo en equipo?
+### ¿Se ha realizado trabajo en equipo?
 
-Sí,se ha realizado en equipo. Inicialmente y por las circunstancias dadas se comenzó a realizar individualmente poniéndose en conjunto posteriormente.
+Sí, se ha realizado en equipo. Inicialmente y por las circunstancias dadas se comenzó a realizar individualmente poniéndose en conjunto posteriormente.
 
 ### ¿Tiene calidad el conjunto de pruebas disponibles? 
 

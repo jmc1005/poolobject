@@ -16,6 +16,7 @@ import ubu.gii.dass.c01.ReusablePool;
 
 /**
  * @author Javier Martín Castro (jmc1005@alu.ubu.es)
+ * @author Rubén Maté Iturriaga (rmi0012@alu.ubu.es)
  *
  */
 public class ReusablePoolTest {

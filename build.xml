@@ -7,6 +7,15 @@
   <property name="test.build.dir" value="build/test"/>
   <property name="test.src.dir" value="src/test"/>
   <property name="dist" location="dist"/>
+  
+  <!-- Define the Sonar properties -->
+  <property name="sonar.projectKey" value="test3" />
+  <property name="sonar.projectName" value="Example of SonarQube Scanner for Ant Usage" />
+  <property name="sonar.projectVersion" value="1.0" />
+  <property name="sonar.sources" value="src" />
+  <property name="sonar.binaries" value="target" />
+  <property name="sonar.sourceEncoding" value="UTF-8" />
+  <property name="sonar.java.binaries" value="target"/>
 
   <path id="classpath.test">
     <pathelement location="lib/junit-4.12.jar"/>
@@ -83,4 +92,19 @@
     <delete dir="report"/>
     <delete file="jacoco.exec"/>
   </target>
+  
+  <!-- ========= Define SonarQube Scanner for Ant Target ========= -->
+  <target name="sonar" depends="compile">
+    <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+      <!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+      <classpath path="C:\utils\apache-ant-1.10.1\lib\*.jar" />
+    </taskdef>
+
+    <!-- Execute SonarQube Scanner for Ant Analysis -->
+    <sonar:sonar />
+  </target>
+
+  <!-- ========= The main target "all" ========= -->
+  <target name="all" depends="clean,compile,sonar" />
+  
 </project>

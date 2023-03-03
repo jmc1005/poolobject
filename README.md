@@ -1,7 +1,7 @@
 # poolobject
 ===============
 
- [![Java CI](https://github.com/jmc1005/poolobject/actions/workflows/ci.yml/badge.svg)](https://github.com/jmc1005/poolobject/actions/workflows/ci.yml) [![Build Status](https://app.travis-ci.com/jmc1005/poolobject.svg?branch=master)](https://app.travis-ci.com/jmc1005/poolobject) [![codecov](https://codecov.io/gh/jmc1005/poolobject/branch/master/graph/badge.svg?token=CE8SZLHEAW)](https://codecov.io/gh/jmc1005/poolobject)
+ [![Java CI](https://github.com/jmc1005/poolobject/actions/workflows/ci.yml/badge.svg)](https://github.com/jmc1005/poolobject/actions/workflows/ci.yml) [![Build Status](https://app.travis-ci.com/jmc1005/poolobject.svg?branch=master)](https://app.travis-ci.com/jmc1005/poolobject) [![codecov](https://codecov.io/gh/jmc1005/poolobject/branch/master/graph/badge.svg?token=CE8SZLHEAW)](https://codecov.io/gh/jmc1005/poolobject) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/c3210581755c4bbcb8d4cce9b5f76d1f)](https://www.codacy.com/gh/jmc1005/poolobject/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jmc1005/poolobject&amp;utm_campaign=Badge_Grade)
 
 ## Autores:
 
